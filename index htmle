@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TNet AI</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-[#0B0F19] text-white min-h-screen">
+
+
+<!-- Header -->
+<header class="p-5 text-center">
+    <h1 class="text-3xl font-bold text-orange-500">
+        TNet AI
+    </h1>
+
+    <p class="text-gray-400">
+        Trust Network Image Scanner
+    </p>
+</header>
+
+
+
+<!-- Pages -->
+
+<main class="p-5 pb-24">
+
+
+<!-- Scan Page -->
+
+<section id="scanPage">
+
+<div class="bg-[#151B2B] rounded-2xl p-6">
+
+
+<h2 class="text-xl font-bold mb-4">
+<i class="fa-solid fa-image text-orange-500"></i>
+ Image Scan
+</h2>
+
+
+<div class="border-2 border-dashed border-orange-500 rounded-xl p-8 text-center">
+
+<i class="fa-solid fa-cloud-arrow-up text-4xl text-orange-500"></i>
+
+<p class="mt-3 text-gray-400">
+Upload image for analysis
+</p>
+
+
+<input 
+type="file"
+id="imageInput"
+class="mt-4 text-sm"
+/>
+
+
+</div>
+
+
+
+<button
+id="scanBtn"
+class="mt-6 w-full bg-orange-500 hover:bg-orange-600 rounded-xl p-3 font-bold">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+ Scan Image
+
+</button>
+
+
+
+<div id="result"
+class="mt-5 hidden bg-[#0B0F19] p-4 rounded-xl">
+
+<h3 class="font-bold">
+TNet Result
+</h3>
+
+<p id="score"></p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Report Page -->
+
+<section id="reportPage" class="hidden">
+
+
+<div class="bg-[#151B2B] rounded-2xl p-6">
+
+<h2 class="text-xl font-bold text-orange-500">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+TNet Reports
+
+</h2>
+
+
+<div class="mt-5">
+
+<h3 class="font-bold">
+No New Alerts
+</h3>
+
+<p class="text-gray-400">
+Security reports will appear here.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+
+<!-- Bottom Navigation -->
+
+<nav class="fixed bottom-0 left-0 right-0 bg-[#151B2B] p-4 flex justify-around">
+
+
+<button onclick="showScan()"
+class="text-orange-500">
+
+<i class="fa-solid fa-camera text-xl"></i>
+
+<p class="text-sm">
+Scan
+</p>
+
+</button>
+
+
+
+<button onclick="showReport()"
+class="text-gray-400">
+
+<i class="fa-solid fa-file-lines text-xl"></i>
+
+<p class="text-sm">
+Report
+</p>
+
+</button>
+
+
+</nav>
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
